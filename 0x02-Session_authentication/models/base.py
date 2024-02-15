@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-Base module
+""" Base module
 """
 from datetime import datetime
 from typing import TypeVar, List, Iterable
@@ -60,7 +59,7 @@ class Base():
 
     @classmethod
     def load_from_file(cls):
-        """ Load  objects from file
+        """ Load all objects from file
         """
         s_class = cls.__name__
         file_path = ".db_{}.json".format(s_class)
@@ -134,5 +133,5 @@ class Base():
                 if (getattr(obj, k) != v):
                     return False
             return True
-
+        
         return list(filter(_search, DATA[s_class].values()))

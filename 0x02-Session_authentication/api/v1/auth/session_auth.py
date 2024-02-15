@@ -11,7 +11,7 @@ from models.user import User
 
 
 class SessionAuth(Auth):
-    """ Session Authorization protocol methods
+    """ Implement Session Authorization protocol methods
     """
     user_id_by_session_id = {}
 
@@ -36,7 +36,6 @@ class SessionAuth(Auth):
     def current_user(self, request=None):
         """
         Return a user instance based on a cookie value
-            User instance
         """
         session_cookie = self.session_cookie(request)
         user_id = self.user_id_for_session_id(session_cookie)

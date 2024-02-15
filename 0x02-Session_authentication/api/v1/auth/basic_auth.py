@@ -10,7 +10,7 @@ from models.user import User
 
 
 class BasicAuth(Auth):
-    """Authorization protocol methods
+    """ Implement Basic Authorization protocol methods
     """
     def extract_base64_authorization_header(self,
                                             authorization_header: str) -> str:
